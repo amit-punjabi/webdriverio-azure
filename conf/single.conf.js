@@ -6,11 +6,6 @@ exports.config = {
     // console.log("before: " , suite.fullName) 
     // console.log("before title: ", suite.title) 
     
-    request({ 
-    url: 'https://amitpunjabi2:Mb6R9PKpdrnkxxK3GMNE@api.browserstack.com/automate/sessions/' + browser.sessionId + '.json' , 
-    method: 'PUT', 
-    json: {'name': 'suite.fullName'}}) 
-    
 console.log(browser.getSession()['webdriver.remote.sessionid'])
 
     },
