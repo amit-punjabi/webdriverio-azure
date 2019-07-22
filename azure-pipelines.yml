@@ -9,6 +9,11 @@ trigger:
 pool:
   vmImage: 'ubuntu-latest'
 
+strategy:
+  matrix:
+    node:
+      node_version: '6.15.1'
+
 steps:
 - script: echo Hello, world!
 - script: node -v
