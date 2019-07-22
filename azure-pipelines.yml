@@ -11,6 +11,7 @@ pool:
 
 steps:
 - script: echo Hello, world!
+- script: node -v
 - script: npm install
 - script: ls ./node_modules/.bin | grep wdio
 - script: ./node_modules/.bin/wdio -v
