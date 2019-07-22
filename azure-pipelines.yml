@@ -10,7 +10,6 @@ pool:
   vmImage: 'ubuntu-latest'
 
 steps:
-- script: apt-get update
 - script: apt-get install build-essential libssl-dev
 - script: curl https://raw.githubusercontent.com/creationix/nvm/0.25.0/install.sh | bash
 - script: source ~/.profile
