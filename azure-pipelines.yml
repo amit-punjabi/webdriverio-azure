@@ -7,19 +7,17 @@ trigger:
 - master
 
 pool:
-  vmImage: 'ubuntu-latest'
+  vmImage: 'macOS-10.13'
+
 
 steps:
-- script: curl https://raw.githubusercontent.com/creationix/nvm/0.25.0/install.sh | bash
-- script: nvm --version
-- script: nvm install 6.15.1
-- script: nvm use 6
 - script: node -v
 - script: npm install
+- script: npm uninstall fibers
+- script: npm install fibers
 - script: ls ./node_modules/.bin | grep wdio
 - script: ./node_modules/.bin/wdio -v
 - script: npx wdio -v
-- script: npm rebuild node-fibers
 - script: npm run single
   displayName: 'Run a one-line script'
 
