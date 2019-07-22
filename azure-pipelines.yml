@@ -7,10 +7,13 @@ trigger:
 - master
 
 pool:
-  vmImage: 'macOS-10.13'
-
+  vmImage: 'ubuntu-latest'
 
 steps:
+- task: NodeTool@0
+  inputs:
+    versionSpec: '6.15.1'
+    checkLatest: false
 - script: node -v
 - script: npm install
 - script: npm uninstall fibers
