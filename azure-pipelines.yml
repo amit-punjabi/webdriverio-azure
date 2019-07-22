@@ -13,6 +13,8 @@ steps:
 - script: echo Hello, world!
 - script: npm install
 - script: ls ./node_modules/.bin | grep wdio
+- script: ./node_modules/.bin/wdio -v
+- script: npx wdio -v
 - script: npm run single
   displayName: 'Run a one-line script'
 
