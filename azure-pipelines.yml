@@ -12,6 +12,7 @@ pool:
 steps:
 - script: echo Hello, world!
 - script: npm install
+- script: npm install -g wdio-mocha-framework
 - script: npm run single
   displayName: 'Run a one-line script'
 
