@@ -9,6 +9,13 @@ exports.config = {
 console.log(browser.getSession()['webdriver.remote.sessionid'])
 
     },
+  
+  reporters: ['browserstack'],
+    reporterOptions: {
+        browserstack: {
+            outputDir: './'
+        }
+    },
 
   updateJob: false,
   specs: [
